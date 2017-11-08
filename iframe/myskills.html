@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+    <script src="https://code.highcharts.com/js/themes/dark-unica.js"></script>
+
+    <style media="screen">
+    #container {
+      min-width: 100%;
+      max-width: 800px;
+      margin: 0 auto
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+  <script type="text/javascript">
+var data = [
+  {name:"PHP", weight: 0.9},
+  {name:"Python", weight: 0.8},
+  {name:"JavaScript", weight: 0.7},
+  {name:"HTML", weight: 0.9},
+  {name:"CSS", weight: 0.8},
+  {name:"SQL", weight: 0.5},
+  {name:"JSON", weight: 0.6},
+  {name:"SVG", weight: 0.7},
+  {name:"C", weight: 0.5},
+  {name:"JQuery", weight: 0.7},
+  {name:"Bootstrap", weight: 0.6},
+  {name:"Nodejs", weight: 0.4},
+  {name:"VueJS", weight: 0.7},
+  {name:"ReactJS", weight: 0.2},
+  {name:"D3", weight: 0.8},
+  {name:"Octave", weight: 0.3},
+  {name:"Git", weight: 0.4},
+  {name:"Vim", weight: 0.2},
+  {name:"ElasticSearch", weight: 0.6}
+];
+console.log(data);
+Highcharts.chart('container', {
+  series: [{
+      type: 'wordcloud',
+      data: data,
+      name: 'My skill'
+  }],
+  credits: {
+        enabled: false
+    },
+  title: {
+      text: '<span style="font-size:30px; font-weight:900"></span>'
+  }
+});
+  </script>
+</html>
